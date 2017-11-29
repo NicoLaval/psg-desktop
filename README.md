@@ -7,10 +7,6 @@ It was bootstrapped with [Create React App](https://github.com/facebookincubator
 It was packaged thanks to [Electron Builder](https://github.com/electron-userland/electron-builder) to build portable Windows application (.exe).
 See the [doc](https://github.com/electron-userland/electron-builder/blob/master/docs/configuration/configuration.md#build-version-management) for more configuration.
 
- is used to display survey forms :
-
-
-
 ## Installation
 
 ```sh
@@ -43,4 +39,4 @@ Data are to be setted in an external folder:
 
 ## Example configuration files
 
-For a quick start, after building app, you can directly copy configuration files setted in the `psg-desktop-data` folder to `D:/psg-desktop-data` folder and launch the app.
+Example configuration files are setted in the `psg-desktop-data` folder.
