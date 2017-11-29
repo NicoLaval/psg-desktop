@@ -1,0 +1,24 @@
+.pollster {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-weight: bold;
+	padding: 0;
+}
+.surveys {
+	margin-top: 40px;
+	text-align: center;
+}
+
+.page-title {
+	border: 2px solid #ee3467; /*457DBB*/
+	background-color: #ffffff;
+	color: black;
+	border-radius: 6px;
+	padding: 10px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.no-decoration:hover {
+	text-decoration: none
+}

@@ -1,0 +1,52 @@
+{
+	"name": "psg-desktop",
+	"version": "0.1.0",
+	"description": "Desktop app to build surveys forms",
+	"homepage": "./",
+	"author": "NicoLaval",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/NicoLaval/psg-desktop.git"
+	},
+	"build": {
+		"appId": "PSG",
+		"productName": "psg-desktop",
+		"directories": {
+			"buildResources": "./build_resources"
+		},
+		"win": {
+			"target": "portable",
+			"icon": "icon.ico"
+		}
+	},
+	"main": "main.js",
+	"scripts": {
+		"start:dev": "cross-env NODE_PATH=src/ react-scripts start",
+		"electron:dev": "cross-env ELECTRON_ENV=development electron .",
+		"start": "concurrently \"yarn start:dev\" \"yarn run electron:dev\"",
+		"build:prod": "cross-env NODE_PATH=src/ react-scripts build",
+		"dist:prod": "build --win --ia32",
+		"build": "yarn run build:prod && yarn dist:prod",
+		"test": "cross-env NODE_PATH=src/  react-scripts test --env=jsdom",
+		"format":
+			"prettier --trailing-comma es5 --single-quote --write 'src/**/*.js'"
+	},
+	"devDependencies": {
+		"concurrently": "^3.5.1",
+		"cross-env": "^5.0.1",
+		"electron": "^1.7.9",
+		"electron-builder": "^19.46.4",
+		"prettier": "^1.5.2"
+	},
+	"dependencies": {
+		"babel-polyfill": "^6.26.0",
+		"generated-survey": "^0.3.0",
+		"material-ui": "^0.19.4",
+		"prop-types": "^15.5.10",
+		"react": "^16.1.1",
+		"react-dom": "^16.1.1",
+		"react-router-dom": "^4.1.1",
+		"react-scripts": "^1.0.10"
+	}
+}
