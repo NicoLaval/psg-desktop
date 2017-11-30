@@ -4,6 +4,7 @@ import Tabs from 'js/components/shared/tabs';
 import Table from 'js/components/shared/table';
 import { readFile } from 'js/utils/fs';
 import { todos, surveys } from 'config/paths';
+import './app.css';
 
 function App() {
 	const todoss = readFile(todos);
@@ -21,13 +22,13 @@ function App() {
 		));
 	const todoSurvey =
 		todoss.length === 0 ? (
-			<h1>Well done !</h1>
+			<h1 className="centered">Well done !</h1>
 		) : (
 			<div className="surveys">{surveyList}</div>
 		);
 	const todoAdress =
 		todoss.length === 0 ? (
-			<h1>Well done !</h1>
+			<h1 className="centered">Well done !</h1>
 		) : (
 			<Table todos={todoss} surveys={surveyss} />
 		);
