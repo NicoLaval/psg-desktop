@@ -37,6 +37,10 @@ class SurveyEdition extends Component {
 		const todo = todoss.find(
 			t => `${t.id}${t.idSurvey}` === `${id}${idSurvey}`
 		);
+		const { number, street, postalCode, city } = todo.adress;
+		const adressLabel = `Adresse du ménage : ${number} ${street} - ${
+			postalCode
+		} - ${city}`;
 
 		if (redirect) return <Redirect to={redirect} />;
 
@@ -46,6 +50,9 @@ class SurveyEdition extends Component {
 					<h1 className="mui-col-md-8 mui-col-md-offset-2 page-title">
 						{survey.label}
 					</h1>
+				</div>
+				<div className="mui-row">
+					<h4 className="mui-col-md-12 centered">{adressLabel}</h4>
 				</div>
 				<GeneratedSurvey
 					todo={todo}
