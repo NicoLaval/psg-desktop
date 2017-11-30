@@ -24,10 +24,10 @@
 	"scripts": {
 		"start:dev": "cross-env NODE_PATH=src/ react-scripts start",
 		"electron:dev": "cross-env ELECTRON_ENV=development electron .",
-		"start": "concurrently \"yarn start:dev\" \"yarn run electron:dev\"",
+		"start": "concurrently \"yarn start:dev\" \"yarn electron:dev\"",
 		"build:prod": "cross-env NODE_PATH=src/ react-scripts build",
 		"dist:prod": "build --win --ia32",
-		"build": "yarn run build:prod && yarn dist:prod",
+		"build": "yarn build:prod && yarn dist:prod",
 		"test": "cross-env NODE_PATH=src/  react-scripts test --env=jsdom",
 		"format":
 			"prettier --trailing-comma es5 --single-quote --write 'src/**/*.js'"
